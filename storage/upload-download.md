@@ -101,13 +101,15 @@ gsutil logging set off gs://sensitive-bucket
 # Upload a file
 
 gsutil cp file.txt gs://my-bucket/     
+```
 
-
+```bash
 # Download a file
 
 gsutil cp gs://my-bucket/file.txt ./      
+```
 
-
+```bash
 # Rename/move a file
 
 gsutil mv gs://my-bucket/file1 gs://my-bucket/file2  
@@ -116,13 +118,18 @@ gsutil mv gs://my-bucket/file1 gs://my-bucket/file2
 ## 🔑 Permissions
 ```bash
 gsutil iam get gs://my-bucket/            # View bucket IAM policy
+```
+```bash
 gsutil iam ch user:me@example.com:objectViewer gs://my-bucket/  # Add a viewer
-gsutil iam ch -d user:me@example.com gs://my-bucket/            # Remove a viewer
-            
+```
+```bash
+gsutil iam ch -d user:me@example.com gs://my-bucket/            # Remove a viewer            
 ```
 ## 🗑️ Deleting Files
 ```bash
 gsutil rm gs://my-bucket/oldfile.txt      # Delete a single file
+```
+```bash
 gsutil rm -r gs://my-bucket/oldfolder/    # Delete a folder recursively
 ```
 
